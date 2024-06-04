@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
     id "io.github.gradle-nexus.publish-plugin" version "2.0.0"
     //id 'checkstyle'
     id 'jacoco'
@@ -19,7 +19,7 @@ repositories {
     mavenCentral()
 }
 
-def gsonVersion = "2.8.9"
+def gsonVersion = "2.11.0"
 
 configurations {
     all {
@@ -33,7 +33,7 @@ dependencies {
     ext.jcloudsVersion = '2.6.0'
     ext.autoServiceVersion = '1.1.1'
     ext.autoValueVersion = '1.11.0'
-    ext.guiceVersion = '5.1.0'
+    ext.guiceVersion = '7.0.0'
 
     // The transitive dependencies that are exposed via the public API of this project
     api "com.google.code.gson:gson:${gsonVersion}"
@@ -53,7 +53,7 @@ dependencies {
 
     testImplementation ("org.apache.jclouds:jclouds-core:${jcloudsVersion}:tests")
     testImplementation ("org.apache.jclouds.driver:jclouds-slf4j:${jcloudsVersion}")
-    testImplementation ('org.assertj:assertj-core:3.25.3')
+    testImplementation ('org.assertj:assertj-core:3.26.0')
     testImplementation ('org.testng:testng:7.10.2')
     testImplementation ('com.squareup.okhttp:mockwebserver:2.7.5')
     testImplementation ('ch.qos.logback:logback-classic:1.5.6')
